@@ -1,7 +1,7 @@
 package com.hemant.axondemo.api;
 
-import com.hemant.axondemo.AccountView;
-import com.hemant.axondemo.aggregrate.Account;
+import com.hemant.axondemo.command.WithdrawMoneyCommand;
+import com.hemant.axondemo.entities.AccountView;
 import com.hemant.axondemo.command.CreateAccountCommand;
 import com.hemant.axondemo.command.DepositMoneyCommand;
 import org.axonframework.commandhandling.gateway.CommandGateway;
@@ -51,7 +51,7 @@ public class AccountController {
     public CompletableFuture<Object> withdrawMoney(@PathVariable String accountId, @PathVariable Double amount) {
         log.info("Request to withdraw {} dollar from account {} ", amount, accountId);
 
-        return commandGateway.send(new DepositMoneyCommand(accountId, amount));
+        return commandGateway.send(new WithdrawMoneyCommand(accountId, amount));
     }
 
 }

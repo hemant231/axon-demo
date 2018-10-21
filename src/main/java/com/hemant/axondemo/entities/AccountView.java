@@ -1,9 +1,8 @@
-package com.hemant.axondemo;
+package com.hemant.axondemo.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.UUID;
 
 @Entity(name = "account")
 @Table(name = "account")

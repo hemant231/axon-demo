@@ -1,6 +1,6 @@
 package com.hemant.axondemo.api;
 
-import com.hemant.axondemo.AccountView;
+import com.hemant.axondemo.entities.AccountView;
 import com.hemant.axondemo.query.AccountDataServiice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
